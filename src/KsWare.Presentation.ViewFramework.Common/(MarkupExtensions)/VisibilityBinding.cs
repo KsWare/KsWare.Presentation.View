@@ -6,7 +6,7 @@ using JetBrains.Annotations;
 using KsWare.Presentation.Converters;
 
 namespace KsWare.Presentation.ViewFramework {
-	
+
 	/// <summary> Provides a <see cref="Binding"/> for visibility
 	/// </summary>
 	/// <remarks>
@@ -25,9 +25,9 @@ namespace KsWare.Presentation.ViewFramework {
 	/// &lt;/TextBox&gt;
 	/// </code>
 	/// </example>
-	[MarkupExtensionReturnType(typeof (Visibility))]
+	[MarkupExtensionReturnType(typeof(Visibility))]
 	[PublicAPI]
-	public class VisibilityBinding:Binding {
+	public class VisibilityBinding : Binding {
 
 		/// <summary> Initializes a new instance of the <see cref="Binding"/> class 
 		/// with additional
@@ -36,9 +36,9 @@ namespace KsWare.Presentation.ViewFramework {
 		/// <see cref="Binding.UpdateSourceTrigger"/>
 		/// set to <c>true</c>..
 		/// </summary>
-		[Obsolete("Not yet implemented",true)]
+		[Obsolete("Not yet implemented", true)]
 		public VisibilityBinding() {
-			Mode=BindingMode.OneWay;
+			Mode = BindingMode.OneWay;
 		}
 
 		/// <summary> Initializes a new instance of the <see cref="Binding" /> class with an initial path and
@@ -51,7 +51,7 @@ namespace KsWare.Presentation.ViewFramework {
 		/// <param name="path">The initial <see cref="System.Windows.Data.Binding.Path" /> for the binding.</param>
 		/// <param name="expression"> </param>
 		public VisibilityBinding(string path, VisibilityConverter.Expression expression) : base(path) {
-			Mode=BindingMode.OneWay;
+			Mode = BindingMode.OneWay;
 			Converter = VisibilityConverter.Get(expression);
 			ConverterParameter = new VisibilityConverterParameter();
 		}
@@ -67,43 +67,43 @@ namespace KsWare.Presentation.ViewFramework {
 		/// <param name="expression"> </param>
 		/// <param name="compareValue"> </param>
 		public VisibilityBinding(string path, VisibilityConverter.Expression expression, object compareValue) : base(path) {
-			Mode=BindingMode.OneWay;
+			Mode = BindingMode.OneWay;
 			Converter = VisibilityConverter.Get(expression);
-			ConverterParameter = new VisibilityConverterParameter {CompareValue = compareValue};
+			ConverterParameter = new VisibilityConverterParameter { CompareValue = compareValue };
 		}
 
-//		/// <summary> Initializes a new instance of the <see cref="Binding" /> class with an initial path and
-//		/// with additional
-//		/// <see cref="Binding.ValidatesOnDataErrors"/>, 
-//		/// <see cref="Binding.ValidatesOnExceptions"/> and
-//		/// <see cref="Binding.UpdateSourceTrigger"/>
-//		/// set to <c>true</c>.
-//		/// </summary>
-//		/// <param name="path">The initial <see cref="System.Windows.Data.Binding.Path" /> for the binding.</param>
-//		/// <param name="expression"> </param>
-//		/// <param name="designtimeVisibility"> </param>
-//		public VisibilityBinding(string path, VisibilityConverter.Expression expression, Visibility designtimeVisibility) : base(path) {
-//			Mode=System.Windows.Data.BindingMode.OneWay;
-//			Converter = VisibilityConverter.Get(expression);
-//			ConverterParameter = new VisibilityConverterParameter {DesigntimeVisibility = designtimeVisibility};
-//		}
+		//		/// <summary> Initializes a new instance of the <see cref="Binding" /> class with an initial path and
+		//		/// with additional
+		//		/// <see cref="Binding.ValidatesOnDataErrors"/>, 
+		//		/// <see cref="Binding.ValidatesOnExceptions"/> and
+		//		/// <see cref="Binding.UpdateSourceTrigger"/>
+		//		/// set to <c>true</c>.
+		//		/// </summary>
+		//		/// <param name="path">The initial <see cref="System.Windows.Data.Binding.Path" /> for the binding.</param>
+		//		/// <param name="expression"> </param>
+		//		/// <param name="designtimeVisibility"> </param>
+		//		public VisibilityBinding(string path, VisibilityConverter.Expression expression, Visibility designtimeVisibility) : base(path) {
+		//			Mode=System.Windows.Data.BindingMode.OneWay;
+		//			Converter = VisibilityConverter.Get(expression);
+		//			ConverterParameter = new VisibilityConverterParameter {DesigntimeVisibility = designtimeVisibility};
+		//		}
 
-//		/// <summary> Initializes a new instance of the <see cref="Binding" /> class with an initial path and
-//		/// with additional
-//		/// <see cref="Binding.ValidatesOnDataErrors"/>, 
-//		/// <see cref="Binding.ValidatesOnExceptions"/> and
-//		/// <see cref="Binding.UpdateSourceTrigger"/>
-//		/// set to <c>true</c>.
-//		/// </summary>
-//		/// <param name="path">The initial <see cref="System.Windows.Data.Binding.Path" /> for the binding.</param>
-//		/// <param name="expression"> </param>
-//		/// <param name="designtimeVisibility"> </param>
-//		/// <param name="compareValue"></param>
-//		public VisibilityBinding(string path, VisibilityConverter.Expression expression, Visibility designtimeVisibility, object compareValue) : base(path) {
-//			Mode=System.Windows.Data.BindingMode.OneWay;
-//			Converter = VisibilityConverter.Get(expression);
-//			ConverterParameter = _parameter = new VisibilityConverterParameter {DesigntimeVisibility = designtimeVisibility,CompareValue = compareValue};
-//		}
+		//		/// <summary> Initializes a new instance of the <see cref="Binding" /> class with an initial path and
+		//		/// with additional
+		//		/// <see cref="Binding.ValidatesOnDataErrors"/>, 
+		//		/// <see cref="Binding.ValidatesOnExceptions"/> and
+		//		/// <see cref="Binding.UpdateSourceTrigger"/>
+		//		/// set to <c>true</c>.
+		//		/// </summary>
+		//		/// <param name="path">The initial <see cref="System.Windows.Data.Binding.Path" /> for the binding.</param>
+		//		/// <param name="expression"> </param>
+		//		/// <param name="designtimeVisibility"> </param>
+		//		/// <param name="compareValue"></param>
+		//		public VisibilityBinding(string path, VisibilityConverter.Expression expression, Visibility designtimeVisibility, object compareValue) : base(path) {
+		//			Mode=System.Windows.Data.BindingMode.OneWay;
+		//			Converter = VisibilityConverter.Get(expression);
+		//			ConverterParameter = _parameter = new VisibilityConverterParameter {DesigntimeVisibility = designtimeVisibility,CompareValue = compareValue};
+		//		}
 
 		/// <summary> Gets or sets the visibility at designtime.
 		/// </summary>
@@ -113,13 +113,13 @@ namespace KsWare.Presentation.ViewFramework {
 			set {
 				var parameter = ConverterParameter as VisibilityConverterParameter;
 				if (parameter == null) {
-					ConverterParameter = parameter=new VisibilityConverterParameter();
+					ConverterParameter = parameter = new VisibilityConverterParameter();
 				}
 				parameter.DesigntimeVisibility = value;
 			}
 			get {
 				var parameter = ConverterParameter as VisibilityConverterParameter;
-				return parameter!=null ? parameter.DesigntimeVisibility : null;
+				return parameter != null ? parameter.DesigntimeVisibility : null;
 			}
 		}
 
@@ -130,13 +130,13 @@ namespace KsWare.Presentation.ViewFramework {
 			set {
 				var parameter = ConverterParameter as VisibilityConverterParameter;
 				if (parameter == null) {
-					ConverterParameter = parameter=new VisibilityConverterParameter();
+					ConverterParameter = parameter = new VisibilityConverterParameter();
 				}
 				parameter.CompareValue = value;
 			}
 			get {
 				var parameter = ConverterParameter as VisibilityConverterParameter;
-				return parameter!=null ? parameter.CompareValue : null;
+				return parameter != null ? parameter.CompareValue : null;
 			}
 		}
 	}
