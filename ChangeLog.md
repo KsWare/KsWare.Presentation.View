@@ -5,7 +5,7 @@ KsWare.Presentation.ViewFramework.Common
 - RootBindingExtension
 - RootElementExtension
 - SharedWidth
-- DesignTime.Properties
+- Design.Properties
 
 
 #### 2019-09-03 (v0.1.32)

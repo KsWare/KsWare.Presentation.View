@@ -4,15 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:dt="http://ksware.de/Presentation/ViewFramework/DesignTime"
-             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             >
     <Grid>
-		<TextBox dt:Properties.Visibility="Collapsed"/>
-		<TextBox Design.Visibility="Collapsed"/>
-		<TextBox>
+		<TextBox Design.Background="Aqua">
 			<Design.Properties>
-				<dt:DesignerProperty Name="Text" Value="as"/>
+				<DesignProperty Name="Text" Value="Visible"/>
+				<DesignProperty Name="BorderBrush" Value="#FFFF0000"/>
+				<DesignProperty Name="Width" Value="10cm"/>
+				<DesignProperty Name="BorderThickness" Value="1,2,3,5"/>
 			</Design.Properties>
 		</TextBox>
     </Grid>   

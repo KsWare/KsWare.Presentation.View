@@ -5,7 +5,7 @@ Common classes for KsWare Presentation Framework for View
 - [RootBindingExtension](##RootBindingExtension)
 - [RootElementExtension](##RootElementExtension)
 - [SharedWidth (attached behavior)](##SharedWidth)
-- DesignTime.Properties
+- [Design.Properties](##Design.Properties)
 
 ## VisibilityBinding
 ## RootBindingExtension
@@ -18,6 +18,18 @@ example: Both Labels will have same width (largest width of the group).
 xmlns:ab="clr-namespace:KsWare.Presentation.ViewFramework.AttachedBehavior;assembly=KsWare.Presentation" 
 <Label Content="longest text" ab:SharedWidth.Group="swGroupA"/>
 <Label Content="short" ab:SharedWidth.Group="swGroupA"/>
+```
+## Design.Properties
+Provides property values for design time.
+```xml
+<TextBox Design.Background="Aqua" Design.Visibility="Hidden">
+    <Design.Properties>
+        <DesignProperty Name="Text" Value="Visible" />
+        <DesignProperty Name="BorderBrush" Value="#FFFF0000" />
+        <DesignProperty Name="Width" Value="10cm" />
+        <DesignProperty Name="BorderThickness" Value="1,2,3,4" />
+    </Design.Properties>
+</TextBox>
 ```
 
 
