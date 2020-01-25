@@ -1,6 +1,28 @@
 # KsWare.Presentation.ViewFramework.Common
 Common classes for KsWare Presentation Framework for View
 
+- [VisibilityBinding](##VisibilityBinding)
+- [RootBindingExtension](##RootBindingExtension)
+- [RootElementExtension](##RootElementExtension)
+- [SharedWidth (attached behavior)](##SharedWidth)
+- DesignTime.Properties
+
+## VisibilityBinding
+## RootBindingExtension
+## RootElementExtension
+## SharedWidth
+Provides support for a shared width (attached property)
+
+example: Both Labels will have same width (largest width of the group).
+```xml
+xmlns:ab="clr-namespace:KsWare.Presentation.ViewFramework.AttachedBehavior;assembly=KsWare.Presentation" 
+<Label Content="longest text" ab:SharedWidth.Group="swGroupA"/>
+<Label Content="short" ab:SharedWidth.Group="swGroupA"/>
+```
+
+
+
+
 | |Master|Develop|Kux|
 |---|---|---|---|
 |Build|[![Build status](https://ci.appveyor.com/api/projects/status/f6egmwg7elfxua7y/branch/master?svg=true)](https://ci.appveyor.com/project/KsWare/KsWare-Presentation-ViewFramework-Common/branch/master)|[![Build status](https://ci.appveyor.com/api/projects/status/f6egmwg7elfxua7y/branch/develop?svg=true)](https://ci.appveyor.com/project/KsWare/KsWare-Presentation-ViewFramework-Common/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/f6egmwg7elfxua7y/branch/develop?svg=true)](https://ci.appveyor.com/project/KsWare/KsWare-Presentation-ViewFramework-Common/branch/features/kux)|
