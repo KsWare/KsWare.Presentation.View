@@ -26,14 +26,20 @@
     <ApplicationIcon />
     <StartupObject />
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="%28Bindings%29\VisibilityBinding.cs" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
-    <PackageReference Include="KsWare.Presentation.Converters" Version="0.1.56" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\icon.png" Link="Properties\icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="%28Bindings%29\" />
   </ItemGroup>
 </Project>
