@@ -8,6 +8,7 @@ KsWare.Presentation.ViewFramework.Common
 - Design.Properties
 - VisibilityBinding removed (availabe in KsWare.Presentation.Converters)
 - dependency to KsWare.Presentation.Converters removed
+- BindingProxy
 
 
 #### 2019-09-03 (v0.1.32)

@@ -6,6 +6,8 @@ Common classes for KsWare Presentation Framework for View
 - [RootElementExtension](##RootElementExtension)
 - [SharedWidth (attached behavior)](##SharedWidth)
 - [Design.Properties](##Design.Properties)
+- [BindingProxy](##BindingProxy)
+
 
 ## VisibilityBinding
 ## RootBindingExtension
@@ -31,9 +33,18 @@ Provides property values for design time.
     </Design.Properties>
 </TextBox>
 ```
+## BindingProxy
 
-
-
+```xaml
+<UserControl.Resources>
+   <BindingProxy x:Key="DataContextProxy" Value="{Binding}"/>
+</UserControl.Resources>
+```
+```xaml
+<Button 
+    Command="{Binding Source={StaticResource DataContextProxy}, Path=Value.DoAnythingCommand}"
+/>
+```
 
 | |Master|Develop|Kux|
 |---|---|---|---|
