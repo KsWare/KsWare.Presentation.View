@@ -1,6 +1,10 @@
 # ChangeLog
 KsWare.Presentation.ViewFramework.Common
 
+### 2021-07-23
+- TargetFrameworks removed: netcoreapp3.0
+- TargetFrameworks added: netcoreapp3.1;net5.0-windows
+
 ### 2020-01-25
 - RootBindingExtension
 - RootElementExtension
