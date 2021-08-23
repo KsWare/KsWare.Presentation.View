@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="KsWare.Presentation.ViewFramework.Tests.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dt="http://ksware.de/Presentation/ViewFramework/DesignTime"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+		<TextBox Design.Background="Aqua">
+			<Design.Properties>
+				<DesignProperty Name="Text" Value="Visible"/>
+				<DesignProperty Name="BorderBrush" Value="#FFFF0000"/>
+				<DesignProperty Name="Width" Value="10cm"/>
+				<DesignProperty Name="BorderThickness" Value="1,2,3,5"/>
+			</Design.Properties>
+		</TextBox>
+    </Grid>   
+</UserControl>
