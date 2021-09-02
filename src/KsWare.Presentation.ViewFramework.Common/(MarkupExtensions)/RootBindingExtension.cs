@@ -269,6 +269,34 @@ namespace KsWare.Presentation.ViewFramework {
 				FallbackValue			= FallbackValue,
 			};
 		}
+
+		/// <summary>
+		/// Helper method for provide value to create binding object.
+		/// </summary>
+		/// <param name="source">The source.</param>
+		/// <returns>The binding object.</returns>
+		private Binding ProvideValueHelper(object source) {
+			var bindingPath = string.IsNullOrEmpty(Path) ? "DataContext" : "DataContext." + Path;
+
+			return new Binding() {
+				Path                    = new PropertyPath(bindingPath),
+				Mode                    = Mode,
+				UpdateSourceTrigger     = UpdateSourceTrigger,
+				NotifyOnSourceUpdated   = NotifyOnSourceUpdated,
+				NotifyOnTargetUpdated   = NotifyOnTargetUpdated,
+				NotifyOnValidationError = NotifyOnValidationError,
+				ValidatesOnDataErrors   = ValidatesOnDataErrors,
+				ValidatesOnExceptions   = ValidatesOnExceptions,
+				IsAsync                 = IsAsync,
+				BindingGroupName        = BindingGroupName,
+				Source                  = source,
+				Converter				= Converter,
+				ConverterCulture		= ConverterCulture,
+				ConverterParameter		= ConverterParameter,
+				StringFormat			= StringFormat,
+				FallbackValue			= FallbackValue,
+			};
+		}
 	}
 
 }

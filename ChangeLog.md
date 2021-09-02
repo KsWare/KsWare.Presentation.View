@@ -1,6 +1,10 @@
 # ChangeLog
 KsWare.Presentation.ViewFramework.Common
 
+### 2021-09-02
+- Add BindingProxy.ValueChanged event
+- RootBindingExtension: binding changed, use root element as source instead of RelativSource
+
 ### 2021-07-23
 - TargetFrameworks removed: netcoreapp3.0
 - TargetFrameworks added: netcoreapp3.1;net5.0-windows
