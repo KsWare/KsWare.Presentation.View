@@ -27,7 +27,7 @@ namespace KsWare.Presentation.ViewFramework {
 
 		private static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) {
 			var o = (BindingProxy)d;
-			o.ValueChanged.Invoke(o, e);
+			o.ValueChanged?.Invoke(o, e);
 		}
 		
 		/// <summary>
