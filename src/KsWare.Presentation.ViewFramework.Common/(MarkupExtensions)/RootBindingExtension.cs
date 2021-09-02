@@ -239,7 +239,7 @@ namespace KsWare.Presentation.ViewFramework {
 				}
 			}
 
-			return ProvideValueHelper(rootObject.GetType());
+			return ProvideValueHelper(rootObject);
 		}
 
 		/// <summary>
