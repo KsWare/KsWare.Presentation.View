@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.ComponentModel;
+using System.Windows;
 
 
 namespace KsWare.Presentation.ViewFramework {
@@ -21,8 +23,13 @@ namespace KsWare.Presentation.ViewFramework {
 		/// <summary>
 		/// The Value dependency property.
 		/// </summary>
-		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(object), typeof(BindingProxy), new UIPropertyMetadata(null));
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(object), typeof(BindingProxy), new UIPropertyMetadata(null,PropertyChangedCallback));
 
+		private static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) {
+			var o = (BindingProxy)d;
+			o.ValueChanged.Invoke(o, e);
+		}
+		
 		/// <summary>
 		/// Gets or sets the value.
 		/// </summary>
@@ -32,10 +39,15 @@ namespace KsWare.Presentation.ViewFramework {
 			set => SetValue(ValueProperty, value);
 		}
 
+		/// <summary>
+		/// Raised on <see cref="Value"/> changes.
+		/// </summary>
+		public event EventHandler<DependencyPropertyChangedEventArgs> ValueChanged;
 
 		/// <inheritdoc />
 		protected override Freezable CreateInstanceCore() {
 			return new BindingProxy();
 		}
 	}
+
 }
