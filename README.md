@@ -8,7 +8,6 @@ Common classes for KsWare Presentation Framework for View
 - [Design.Properties](##Design.Properties)
 - [BindingProxy](##BindingProxy)
 
-
 ## VisibilityBinding
 ## RootBindingExtension
 ## RootElementExtension
