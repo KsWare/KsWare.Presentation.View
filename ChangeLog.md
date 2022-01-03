@@ -1,6 +1,10 @@
 # ChangeLog
 KsWare.Presentation.ViewFramework.Common
 
+### 2022-01-02
+- TargetFrameworks added: net452;net6.0-windows
+- TargetFrameworks removed: net45
+
 ### 2021-09-02
 - Add BindingProxy.ValueChanged event
 - RootBindingExtension: binding changed, use root element as source instead of RelativSource
