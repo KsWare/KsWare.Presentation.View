@@ -1,6 +1,11 @@
 # ChangeLog
 KsWare.Presentation.ViewFramework.Common
 
+# 0.4 [2023-03-12]
+- TargetFrameworks added net462
+- TargetFrameworks removed: net45, net5.0-windows
+- update Nuget packages
+- 
 ### 2022-01-02
 - TargetFrameworks added: net452;net6.0-windows
 - TargetFrameworks removed: net45
